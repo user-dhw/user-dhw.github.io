@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-24T04:52:54.029Z</updated>
+  <updated>2022-11-24T12:24:59.197Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/"/>
     <id>http://example.com/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/</id>
     <published>2022-11-24T04:43:10.000Z</published>
-    <updated>2022-11-24T04:52:54.029Z</updated>
+    <updated>2022-11-24T12:24:59.197Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Vue 官方文档中，明确说明了<code>不建议将v-for和v-if同时使用</code>。因为两者作用在同一个元素时，优先级是不同的。</p><ul><li><strong>在 vue2 中，v-for 的优先级更高</strong></li><li><strong>在 vue3 中，v-if 的优先级更高</strong></li></ul><h2 id="Vue2："><a href="#Vue2：" class="headerlink" title="Vue2："></a>Vue2：</h2><p>在 Vue2 中，v-for 的优先级是高于 v-if 的，如果作用在同一元素上，输出的渲染函数中会先执行循环再判断条件，哪怕只渲染列表中一小部分元素，也得在每次重渲染的时候[遍历]整个列表，这会造成性能的浪费</p><h2 id="Vue3："><a href="#Vue3：" class="headerlink" title="Vue3："></a>Vue3：</h2><p>而在 Vue3 中，v-if 的优先级时高于 v-for 的，因此 v-if 执行时要调用的变量可能还不存在，会导致报错。</p><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>1.使用空标签 template，让 for 循环在 template 上面；</p><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in list&quot;</span> &gt;</span></span><br><span class="language-xml"></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;active&quot;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="language-xml">            </span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">item.name</span>&#125;&#125;</span><span class="language-xml"></span><br><span class="language-xml">        &lt;/div &gt;</span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br></code></pre></td></tr></table></figure>]]></content>
     
