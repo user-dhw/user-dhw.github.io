@@ -16,13 +16,15 @@
   <meta name="author" content="dinghw">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="routerrouter 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如： router.push：跳转链接就可以用  this.$router.push，和router-link跳转一样 router.replace():跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记">
+<meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博客文章">
 <meta property="og:url" content="http://example.com/2022/11/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="routerrouter 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如： router.push：跳转链接就可以用  this.$router.push，和router-link跳转一样 router.replace():跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-20T03:35:37.000Z">
-<meta property="article:modified_time" content="2022-11-20T03:35:37.253Z">
+<meta property="article:modified_time" content="2022-11-24T01:11:14.140Z">
 <meta property="article:author" content="dinghw">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -217,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          388 字
         
       </span>
     
@@ -228,7 +230,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -271,7 +273,12 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="router"><a href="#router" class="headerlink" title="router"></a><strong>router</strong></h2><p>router 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如：</p>
+<h4 id="router-push："><a href="#router-push：" class="headerlink" title="router.push："></a>router.push：</h4><p>跳转链接就可以用  <code>this.$router.push，和router-link跳转一样</code></p>
+<h4 id="router-replace"><a href="#router-replace" class="headerlink" title="router.replace():"></a>router.replace():</h4><p>跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记录.</p>
+<h4 id="router-go-n"><a href="#router-go-n" class="headerlink" title="router.go(n):"></a>router.go(n):</h4><p>这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，window.history.Go(n)</p>
+<h2 id="route"><a href="#route" class="headerlink" title="route"></a><strong>route</strong></h2><p>route 是当前正在跳转的路由对象，可以从 route 里面获取 hash，name ，path，query，params， fullPath 等属性方法比如接受参数时使用<br><strong>this.$route.query.参数名 —- this.route.params.参数名</strong></p>
+
                 
               </div>
             
@@ -336,12 +343,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2022/11/20/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
