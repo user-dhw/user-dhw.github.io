@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>防抖和节流</title>
+    <link href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/"/>
+    <url>/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次"><a href="#1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次" class="headerlink" title="1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次"></a>1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次</h3><h6 id="1-典型场景：搜索框的输入"><a href="#1-典型场景：搜索框的输入" class="headerlink" title="1.典型场景：搜索框的输入"></a>1.典型场景：搜索框的输入</h6><h6 id="2-代码思路：利用定时器，每次触发前清空之前的定时器重新开始"><a href="#2-代码思路：利用定时器，每次触发前清空之前的定时器重新开始" class="headerlink" title="2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始"></a>2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始</h6><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01c87c9c29bd4313b92853d16e0dc758~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p><h3 id="2、节流：单位时间内，频发触发事件，规定时间内只执行一次"><a href="#2、节流：单位时间内，频发触发事件，规定时间内只执行一次" class="headerlink" title="2、节流：单位时间内，频发触发事件，规定时间内只执行一次"></a>2、节流：单位时间内，频发触发事件，规定时间内只执行一次</h3><h6 id="1-典型场景：高频事件，快速点击，鼠标滑动，scroll-事件"><a href="#1-典型场景：高频事件，快速点击，鼠标滑动，scroll-事件" class="headerlink" title="1.典型场景：高频事件，快速点击，鼠标滑动，scroll 事件"></a>1.典型场景：高频事件，快速点击，鼠标滑动，scroll 事件</h6><h6 id="2-代码思路：利用定时器，等定时器执行完毕，才开启定时器"><a href="#2-代码思路：利用定时器，等定时器执行完毕，才开启定时器" class="headerlink" title="2.代码思路：利用定时器，等定时器执行完毕，才开启定时器"></a>2.代码思路：利用定时器，等定时器执行完毕，才开启定时器</h6><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ea3fcd9ba408422eb51e1b27faa698ee~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>forEach和map的区别</title>
     <link href="/2022/11/25/forEach%E5%92%8Cmap%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <url>/2022/11/25/forEach%E5%92%8Cmap%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
