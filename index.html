@@ -1,195 +1,655 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Blog</title><meta name="author" content="dinghw"><meta name="copyright" content="dinghw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="dinghw">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="dinghw">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  }
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-02-09 14:18:41'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+<meta name="twitter:card" content="summary_large_image">
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <title>Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="8岁前端工程师"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/01/31/vue%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8/" target="_self">
+          vue中key的作用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/31/vue%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8/" target="_self">
+        <div>
+          vue 中 key 的作用 虚拟 DOM 中 key 的作用：key 是虚拟 DOM 对象的标识，当数据发生变化时，Vue 会根据【新虚拟 DOM】,随后 Vue 进行【新虚拟 DOM】与【旧虚拟 DOM】的差异比较，比较规则如下：  对比规则：(1).旧虚拟 DOM 中找到了与新虚拟 DOM 相同的 key：①.若虚拟 DOM 中内容没变, 直接使用之前的真实 DOM！②.若虚拟 DOM 中内容
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-31 19:33" pubdate>
+              2023-01-31
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/01/15/%E5%B8%B8%E7%94%A8/" target="_self">
+          常用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/15/%E5%B8%B8%E7%94%A8/" target="_self">
+        <div>
+          汇集了一些常用但是内容不是很多的方法。  下载12345678910111213141516171819202122232425/ 通用下载方法export function download(url, params, filename) &#123;  downloadLoadingInstance = Loading.service(&#123; text: &quot;正在下载数据，请稍候
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-15 19:33" pubdate>
+              2023-01-15
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
+          vue插槽的使用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          1、什么是插槽1、插槽就是在子组件中提供父组件一个占位符，用于用户填充任何自己所需求的模板代码，2、插槽显不显示、怎样显示是由父组件来控制的，而插槽在哪里显示在什么位置就由子组件来进行控制3、可以把插槽认为是组件封装期间，为用户预留的内容的占位符。 2、什么时候使用插槽当子组件被复用时，需要在特定的区域展示不同的需求内容 3.使用3.1.匿名插槽（默认插槽）12345678910&lt;!--父组
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-12 17:47" pubdate>
+              2022-12-12
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
+          原型和原型链
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
+        <div>
+          原型:每一个函数都有 prototype 属性 称之为原型，因为这个属性的只是一个对象，也称之为原型对象。 作用： 存放一些属性和方法 在 javascript 中实现继承  原型链:对象身上都有proto属性，这个属性指向他的原型对象，原型对象也是对象，也有proto属性指向原型类型对象的原型对象，这样一层一层查找就形成了原型链 每个函数 function 身上都有一个 prototype，即显
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-27 20:56" pubdate>
+              2022-11-27
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" target="_self">
+          防抖和节流
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" target="_self">
+        <div>
+          1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次1.典型场景：搜索框的输入2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始 2、节流：单位时间内，频发触发事件，规定时间内只执行一次1.典型场景：高频事件，快速点击，鼠标滑动，scroll 事件2.代码思路：利用定时器，等定时器执行完毕，才开启定时器
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-27 14:32" pubdate>
+              2022-11-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/js%E5%9F%BA%E7%A1%80/" class="category-chain-item">js基础</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/25/forEach%E5%92%8Cmap%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+          forEach和map的区别
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/25/forEach%E5%92%8Cmap%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_self">
+        <div>
+          1、相同点1） 都是循环遍历数组中的每一项。 2） 每次执行匿名函数都支持三个参数，参数分别为 item(当前每一项)，index(索引值)，arr(原数组)。 3） 匿名函数中的 this 都是指向 window。 4）只能遍历数组。 2、不同点1） map()会分配内存空间存储新数组并返回，forEach()不会返回数据。 2） forEach()允许 callback 更改原始数组的元素，m
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-25 22:36" pubdate>
+              2022-11-25
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/" target="_self">
+          详解v-if和v-for不能同时使用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          前言在 Vue 官方文档中，明确说明了不建议将v-for和v-if同时使用。因为两者作用在同一个元素时，优先级是不同的。  在 vue2 中，v-for 的优先级更高 在 vue3 中，v-if 的优先级更高  Vue2：在 Vue2 中，v-for 的优先级是高于 v-if 的，如果作用在同一元素上，输出的渲染函数中会先执行循环再判断条件，哪怕只渲染列表中一小部分元素，也得在每次重渲染的时候[遍
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-24 12:43" pubdate>
+              2022-11-24
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/24/%E5%9F%BA%E4%BA%8E%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F/" target="_self">
+          基于原生实现拖拽排序
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/24/%E5%9F%BA%E4%BA%8E%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F/" target="_self">
+        <div>
+          效果图 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-24 09:35" pubdate>
+              2022-11-24
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" target="_self">
+          Vue中router和route的区别
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" target="_self">
+        <div>
+          routerrouter 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如： router.push：跳转链接就可以用  this.$router.push，和router-link跳转一样 router.replace():跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-20 11:35" pubdate>
+              2022-11-20
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
       }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Blog</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/01/31/vue%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8/" title="vue中key的作用">vue中key的作用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-31T11:33:30.000Z" title="发表于 2023-01-31 19:33:30">2023-01-31</time></span></div><div class="content">vue 中 key 的作用
-虚拟 DOM 中 key 的作用：key 是虚拟 DOM 对象的标识，当数据发生变化时，Vue 会根据【新虚拟 DOM】,随后 Vue 进行【新虚拟 DOM】与【旧虚拟 DOM】的差异比较，比较规则如下：
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
-对比规则：(1).旧虚拟 DOM 中找到了与新虚拟 DOM 相同的 key：①.若虚拟 DOM 中内容没变, 直接使用之前的真实 DOM！②.若虚拟 DOM 中内容变了, 则生成新的真实 DOM，随后替换掉页面中之前的真实 DOM。(2).旧虚拟 DOM 中未找到与新虚拟 DOM 相同的 key 创建新的真实 DOM，随后渲染到到页面。
 
-用 index 作为 key 可能会引发的问题： 1. 若对数据进行：逆序添加、逆序删除等破坏顺序操作:会产生没有必要的真实 DOM 更新 &#x3D;&#x3D;&gt; 界面效果没问题, 但效率低。 2. 如果结构中还包含输入类的 DOM：会产生错误 DOM 更新 &#x3D;&#x3D;&gt; 界面有问题。
 
-开发中如何选择 key?: 1.最好使用每条数据的唯一标识作为 key, 比如 id、手机号、身份证号 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/01/15/%E5%B8%B8%E7%94%A8/" title="常用">常用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-15T11:33:30.000Z" title="发表于 2023-01-15 19:33:30">2023-01-15</time></span></div><div class="content">
-汇集了一些常用但是内容不是很多的方法。
 
-下载12345678910111213141516171819202122232425/ 通用下载方法export function download(url, params, filename) &#123;  downloadLoadingInstance = Loading.service(&#123; text: &quot;正在下载数据，请稍候&quot;, spinner: &quot;el-icon-loading&quot;, background: &quot;rgba(0, 0, 0, 0.7)&quot;, &#125;)  return service.post(url, params, &#123;    transformRequest: [(params) =&gt; &#123; return JSON.stringify(params) &#125;],    headers: &#123; &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urle ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" title="vue插槽的使用">vue插槽的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-12T09:47:53.000Z" title="发表于 2022-12-12 17:47:53">2022-12-12</time></span></div><div class="content">1、什么是插槽1、插槽就是在子组件中提供父组件一个占位符，用于用户填充任何自己所需求的模板代码，2、插槽显不显示、怎样显示是由父组件来控制的，而插槽在哪里显示在什么位置就由子组件来进行控制3、可以把插槽认为是组件封装期间，为用户预留的内容的占位符。
-2、什么时候使用插槽当子组件被复用时，需要在特定的区域展示不同的需求内容
-3.使用3.1.匿名插槽（默认插槽）12345678910&lt;!--父组件内容--&gt;&lt;template&gt;  &lt;div&gt;    &lt;!--子组件标签--&gt;    &lt;Category&gt;        &lt;!--子组件标签体内容，也就是需要插入的内容--&gt;        &lt;a href=&quot;#&quot; slot=&quot;footer&quot;&gt;更多信息&lt;/a&gt;    &lt;/Category&gt;  &lt;/div&gt;&lt;/template&gt;
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
-1234567&lt;!--子组件内容--&gt;&lt;template&gt;  &lt;div&g ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">原型和原型链</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-27T12:56:58.000Z" title="发表于 2022-11-27 20:56:58">2022-11-27</time></span></div><div class="content">原型:每一个函数都有 prototype 属性 称之为原型，因为这个属性的只是一个对象，也称之为原型对象。
-作用：
-存放一些属性和方法
-在 javascript 中实现继承
 
-原型链:对象身上都有proto属性，这个属性指向他的原型对象，原型对象也是对象，也有proto属性指向原型类型对象的原型对象，这样一层一层查找就形成了原型链
-每个函数 function 身上都有一个 prototype，即显式原型(属性)每个实例对象都有一个proto可称为隐式原型(属性)实例对象的隐式原型等于它构造函数的显式原型我们通过 new 构造函创建的实例对象身上有proto属性，这个属性指向构造函数的 prototype 属性，对象身上proto和构造函数 prototype 是等价的
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" title="防抖和节流">防抖和节流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-27T06:32:07.000Z" title="发表于 2022-11-27 14:32:07">2022-11-27</time></span></div><div class="content">1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次1.典型场景：搜索框的输入2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始
-2、节流：单位时间内，频发触发事件，规定时间内只执行一次1.典型场景：高频事件，快速点击，鼠标滑动，scroll 事件2.代码思路：利用定时器，等定时器执行完毕，才开启定时器
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/25/forEach%E5%92%8Cmap%E7%9A%84%E5%8C%BA%E5%88%AB/" title="forEach和map的区别">forEach和map的区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-25T14:36:38.000Z" title="发表于 2022-11-25 22:36:38">2022-11-25</time></span></div><div class="content">1、相同点1） 都是循环遍历数组中的每一项。
-2） 每次执行匿名函数都支持三个参数，参数分别为 item(当前每一项)，index(索引值)，arr(原数组)。
-3） 匿名函数中的 this 都是指向 window。
-4）只能遍历数组。
-2、不同点1） map()会分配内存空间存储新数组并返回，forEach()不会返回数据。
-2） forEach()允许 callback 更改原始数组的元素，map()返回新的数组，map() 不会对空数组进行检测。
-二、forEach 和 map 有相同值的区别相同处：forEach 和 map 都相当于封装好的单层 for 循环，三个值都相同。
-不同处：1、forEach()方法没有返回值，而 map()方法有返回值。
-2、forEach 遍历通常都是直接引入当前遍历数组的内存地址，生成的数组的值发生变化，当前遍历的数组对应的值也会发生变化。
-3、map 遍历的后的数组通常都是生成一个新的数组，新的数组的值发生变化，当前遍历的数组值不会变化。
-4、总的来说 map 的速度大于 forEach。
-使用场景
-forEach 适合于你并不打算改变数据的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/" title="详解v-if和v-for不能同时使用">详解v-if和v-for不能同时使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-24T04:43:10.000Z" title="发表于 2022-11-24 12:43:10">2022-11-24</time></span></div><div class="content">前言在 Vue 官方文档中，明确说明了不建议将v-for和v-if同时使用。因为两者作用在同一个元素时，优先级是不同的。
 
-在 vue2 中，v-for 的优先级更高
-在 vue3 中，v-if 的优先级更高
+  <script  src="/js/local-search.js" ></script>
 
-Vue2：在 Vue2 中，v-for 的优先级是高于 v-if 的，如果作用在同一元素上，输出的渲染函数中会先执行循环再判断条件，哪怕只渲染列表中一小部分元素，也得在每次重渲染的时候[遍历]整个列表，这会造成性能的浪费
-Vue3：而在 Vue3 中，v-if 的优先级时高于 v-for 的，因此 v-if 执行时要调用的变量可能还不存在，会导致报错。
-解决方法：1.使用空标签 template，让 for 循环在 template 上面；
-1234567&lt;template v-for=&quot;item in list&quot; &gt;        &lt;div v-if=&quot;active&quot; :key=&quot;item.id&quot;&gt;            &#123;&#123;item.name&#125;&#125;    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/24/%E5%9F%BA%E4%BA%8E%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E6%8E%92%E5%BA%8F/" title="基于原生实现拖拽排序">基于原生实现拖拽排序</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-24T01:35:56.000Z" title="发表于 2022-11-24 09:35:56">2022-11-24</time></span></div><div class="content">效果图
-代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;style&gt;  .list-item &#123;  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" title="Vue中router和route的区别">Vue中router和route的区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-20T03:35:37.000Z" title="发表于 2022-11-20 11:35:37">2022-11-20</time></span></div><div class="content">routerrouter 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如：
-router.push：跳转链接就可以用  this.$router.push，和router-link跳转一样
-router.replace():跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记录.
-router.go(n):这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，window.history.Go(n)
-routeroute 是当前正在跳转的路由对象，可以从 route 里面获取 hash，name ，path，query，params， fullPath 等属性方法比如接受参数时使用this.$route.query.参数名 —- this.route.params.参数名
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dinghw</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/01/31/vue%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8/" title="vue中key的作用">vue中key的作用</a><time datetime="2023-01-31T11:33:30.000Z" title="发表于 2023-01-31 19:33:30">2023-01-31</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/01/15/%E5%B8%B8%E7%94%A8/" title="常用">常用</a><time datetime="2023-01-15T11:33:30.000Z" title="发表于 2023-01-15 19:33:30">2023-01-15</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" title="vue插槽的使用">vue插槽的使用</a><time datetime="2022-12-12T09:47:53.000Z" title="发表于 2022-12-12 17:47:53">2022-12-12</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">原型和原型链</a><time datetime="2022-11-27T12:56:58.000Z" title="发表于 2022-11-27 20:56:58">2022-11-27</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" title="防抖和节流">防抖和节流</a><time datetime="2022-11-27T06:32:07.000Z" title="发表于 2022-11-27 14:32:07">2022-11-27</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-02-09T06:18:41.577Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By dinghw</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
