@@ -602,60 +602,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
-          原型和原型链
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/27/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
-        <div>
-          原型:每一个函数都有 prototype 属性 称之为原型，因为这个属性的只是一个对象，也称之为原型对象。 作用： 存放一些属性和方法 在 javascript 中实现继承  原型链:对象身上都有proto属性，这个属性指向他的原型对象，原型对象也是对象，也有proto属性指向原型类型对象的原型对象，这样一层一层查找就形成了原型链 每个函数 function 身上都有一个 prototype，即显
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-11-27 20:56" pubdate>
-              2022-11-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/js%E5%9F%BA%E7%A1%80/" class="category-chain-item">js基础</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
         <a href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" target="_self">
           防抖和节流
         </a>
@@ -664,7 +610,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/11/27/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" target="_self">
         <div>
-          1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次1.典型场景：搜索框的输入2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始12345678910111213141516  function debounce(fn, delay) &#123;  //记录上一次的延时器  var timer = null;  return function () &#123;    //清除上
+          1、防抖：单位时间内，频繁触发事件，规定时间只执行最后一次1.典型场景：搜索框的输入2.代码思路：利用定时器，每次触发前清空之前的定时器重新开始1234567891011     // 首先声明一个全局变量为空，把它当做定时器的名字// 然后再声明一个函数点击按钮的时候触发// 函数内开启一个定时器，定时器上面使用clearTimeout清除定时器// 当在规定时间内多次点击按钮的时候，就会一直清
         </div>
       </a>
 
@@ -743,6 +689,60 @@
       <span class="category-chain">
         
   <a href="/categories/js%E5%9F%BA%E7%A1%80/" class="category-chain-item">js基础</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/" target="_self">
+          详解v-if和v-for不能同时使用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/11/24/%E8%AF%A6%E8%A7%A3v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          前言在 Vue 官方文档中，明确说明了不建议将v-for和v-if同时使用。因为两者作用在同一个元素时，优先级是不同的。  在 vue2 中，v-for 的优先级更高 在 vue3 中，v-if 的优先级更高  Vue2：在 Vue2 中，v-for 的优先级是高于 v-if 的，如果作用在同一元素上，输出的渲染函数中会先执行循环再判断条件，哪怕只渲染列表中一小部分元素，也得在每次重渲染的时候[遍
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-24 12:43" pubdate>
+              2022-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/vue%E5%9F%BA%E7%A1%80/" class="category-chain-item">vue基础</a>
   
   
 
