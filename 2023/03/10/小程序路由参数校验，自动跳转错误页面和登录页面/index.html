@@ -16,21 +16,21 @@
   <meta name="author" content="dinghw">
   <meta name="keywords" content="">
   
-    <meta name="description" content="el-select 数据下拉懒加载 下拉框需要分页查询，需要加入自定义指令，下拉到底部时触发下一页的查询  12345678910&lt;el-select v-model&#x3D;&quot;value&quot;    placeholder&#x3D;&quot;请选择&quot;    v-loadMore&#x3D;&quot;loadMore&quot;&gt;    &lt;el-option v-for&#x3D;&amp;q">
+    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940    我们定义了一个checkParams函数用于校验路由参数，检查了参数是否为空、是否符合格式要求以及用户登录状态。如果校验不通过，则自动跳转到相应的错误页面或登录页面。在路由页面的onLoad函数中，我们调用checkParams函数进行参数校验。如果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="el-select 数据下拉懒加载">
-<meta property="og:url" content="http://example.com/2023/03/23/el-select-%E6%95%B0%E6%8D%AE%E4%B8%8B%E6%8B%89%E6%87%92%E5%8A%A0%E8%BD%BD/index.html">
+<meta property="og:title" content="小程序路由参数校验，自动跳转错误页面和登录页面">
+<meta property="og:url" content="http://example.com/2023/03/10/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C%EF%BC%8C%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="el-select 数据下拉懒加载 下拉框需要分页查询，需要加入自定义指令，下拉到底部时触发下一页的查询  12345678910&lt;el-select v-model&#x3D;&quot;value&quot;    placeholder&#x3D;&quot;请选择&quot;    v-loadMore&#x3D;&quot;loadMore&quot;&gt;    &lt;el-option v-for&#x3D;&amp;q">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940    我们定义了一个checkParams函数用于校验路由参数，检查了参数是否为空、是否符合格式要求以及用户登录状态。如果校验不通过，则自动跳转到相应的错误页面或登录页面。在路由页面的onLoad函数中，我们调用checkParams函数进行参数校验。如果">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-23T11:53:53.000Z">
-<meta property="article:modified_time" content="2023-03-23T12:01:14.207Z">
+<meta property="article:published_time" content="2023-03-10T12:54:54.000Z">
+<meta property="article:modified_time" content="2023-04-10T12:58:40.978Z">
 <meta property="article:author" content="dinghw">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>el-select 数据下拉懒加载 - Blog</title>
+  <title>小程序路由参数校验，自动跳转错误页面和登录页面 - Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="el-select 数据下拉懒加载"></span>
+            <span id="subtitle" data-typed-text="小程序路由参数校验，自动跳转错误页面和登录页面"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-23 19:53" pubdate>
-          2023年3月23日 晚上
+        <time datetime="2023-03-10 20:54" pubdate>
+          2023年3月10日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          776 字
+          819 字
         
       </span>
     
@@ -268,25 +268,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">el-select 数据下拉懒加载</h1>
+            <h1 style="display: none">小程序路由参数校验，自动跳转错误页面和登录页面</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="el-select-数据下拉懒加载"><a href="#el-select-数据下拉懒加载" class="headerlink" title="el-select 数据下拉懒加载"></a>el-select 数据下拉懒加载</h2><ol>
-<li>下拉框需要分页查询，需要加入自定义指令，下拉到底部时触发下一页的查询</li>
-</ol>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">&lt;el-<span class="hljs-keyword">select</span> v-model=<span class="hljs-string">&quot;value&quot;</span><br>    placeholder=<span class="hljs-string">&quot;请选择&quot;</span><br>    v-loadMore=<span class="hljs-string">&quot;loadMore&quot;</span>&gt;<br>    &lt;el-<span class="hljs-keyword">option</span> v-<span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;item in options&quot;</span><br>      :<span class="hljs-keyword">key</span>=<span class="hljs-string">&quot;item.value&quot;</span><br>      :label=<span class="hljs-string">&quot;item.label&quot;</span><br>      :<span class="hljs-keyword">value</span>=<span class="hljs-string">&quot;item.value&quot;</span>&gt;<br>    &lt;/el-<span class="hljs-keyword">option</span>&gt;<br>  &lt;/el-<span class="hljs-keyword">select</span>&gt;<br><br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>自定义指令</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-attr">loadMore</span>: &#123;<br>    <span class="hljs-title function_">bind</span>(<span class="hljs-params">el, binding</span>) &#123;<br>      <span class="hljs-keyword">const</span> dom = el.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.el-select-dropdown .el-select-dropdown__wrap&#x27;</span>);  <span class="hljs-comment">// 获取下拉框元素</span><br>      dom.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;scroll&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;    <span class="hljs-comment">// 监听元素触底</span><br>        <span class="hljs-keyword">const</span> condition = <span class="hljs-variable language_">this</span>.<span class="hljs-property">scrollHeight</span> - <span class="hljs-variable language_">this</span>.<span class="hljs-property">scrollTop</span> &lt;= <span class="hljs-variable language_">this</span>.<span class="hljs-property">clientHeight</span>;<br>        <span class="hljs-keyword">if</span> (condition) &#123;<br>          binding.<span class="hljs-title function_">value</span>();<br>        &#125;<br>      &#125;);<br>    &#125;,<br>  &#125;,<br><br></code></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>方法</li>
-</ol>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">loadMore</span><span class="hljs-params">()</span></span> &#123;<br>   console<span class="hljs-selector-class">.log</span>(<span class="hljs-string">&#x27;到底部了，继续加载数据&#x27;</span>)<br>   <span class="hljs-comment">// 当下拉框滚动且触底时，会触发此事件，可以在此处去请求下拉框分页数据</span><br> &#125;<br></code></pre></td></tr></table></figure>
+                <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs csharp">    我们定义了一个checkParams函数用于校验路由参数，检查了参数是否为空、是否符合格式要求以及用户登录状态。如果校验不通过，则自动跳转到相应的错误页面或登录页面。在路由页面的onLoad函数中，我们调用checkParams函数进行参数校验。如果校验通过，则继续页面加载逻辑。<br>    <span class="hljs-comment">// 校验函数</span><br><span class="hljs-function">function <span class="hljs-title">checkParams</span>(<span class="hljs-params"><span class="hljs-keyword">params</span></span>)</span> &#123;<br>  <span class="hljs-comment">// 检查参数是否为空</span><br>  <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">params</span> || Object.keys(<span class="hljs-keyword">params</span>).length === <span class="hljs-number">0</span>) &#123;<br>    wx.navigateTo(&#123;<br>      url: <span class="hljs-string">&#x27;/pages/errorPage&#x27;</span><br>    &#125;)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>  &#125;<br><br>  <span class="hljs-comment">// 检查参数格式是否正确</span><br>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">params</span>.id !== <span class="hljs-string">&#x27;number&#x27;</span>) &#123;<br>    wx.navigateTo(&#123;<br>      url: <span class="hljs-string">&#x27;/pages/errorPage&#x27;</span><br>    &#125;)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>  &#125;<br><br>  <span class="hljs-comment">// 检查登录状态</span><br>  <span class="hljs-keyword">const</span> userInfo = wx.getStorageSync(<span class="hljs-string">&#x27;userInfo&#x27;</span>)<br>  <span class="hljs-keyword">if</span> (!userInfo) &#123;<br>    wx.navigateTo(&#123;<br>      url: <span class="hljs-string">&#x27;/pages/loginPage&#x27;</span><br>    &#125;)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>  &#125;<br><br>  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>&#125;<br><br><span class="hljs-comment">// 在需要校验参数的路由页面中调用校验函数</span><br>Page(&#123;<br>  onLoad: function(options) &#123;<br>    <span class="hljs-keyword">if</span> (checkParams(options)) &#123;<br>      <span class="hljs-comment">// 参数校验通过，继续页面加载逻辑</span><br>    &#125;<br>  &#125;<br>&#125;)<br><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -294,27 +281,6 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/vue%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" class="category-chain-item">vue管理系统常用方法总结</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -325,8 +291,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>el-select 数据下拉懒加载</div>
-      <div>http://example.com/2023/03/23/el-select-数据下拉懒加载/</div>
+      <div>小程序路由参数校验，自动跳转错误页面和登录页面</div>
+      <div>http://example.com/2023/03/10/小程序路由参数校验，自动跳转错误页面和登录页面/</div>
     </div>
     <div class="license-meta">
       
@@ -338,7 +304,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年3月23日</div>
+          <div>2023年3月10日</div>
         </div>
       
       
@@ -370,12 +336,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/03/23/el-select-%E6%95%B0%E6%8D%AE%E4%B8%8B%E6%8B%89%E6%87%92%E5%8A%A0%E8%BD%BD/" title="el-select 数据下拉懒加载">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">el-select 数据下拉懒加载</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/10/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C%EF%BC%8C%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/" title="小程序路由参数校验，自动跳转错误页面和登录页面">
-                        <span class="hidden-mobile">小程序路由参数校验，自动跳转错误页面和登录页面</span>
+                      <a href="/2023/03/10/TypeScript%E5%9F%BA%E7%A1%80/" title="TypeScript">
+                        <span class="hidden-mobile">TypeScript</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
