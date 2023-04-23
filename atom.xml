@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-23T12:01:14.207Z</updated>
+  <updated>2023-04-23T01:06:52.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>v-model是如何实现的</title>
+    <link href="http://example.com/2023/04/12/v-model%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84/"/>
+    <id>http://example.com/2023/04/12/v-model%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84/</id>
+    <published>2023-04-12T01:00:56.000Z</published>
+    <updated>2023-04-23T01:06:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理:"></a>实现原理:</h3><p>v-model 只不过是一个语法糖而已,真正的实现靠的还是:<br>1、v-bind:绑定响应式数据<br>2、触发 oninput 事件并传递数据，并且在触发 input 事件的时候去动态把 message 设置为目标值</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs awk">&lt;input v-model=<span class="hljs-string">&quot;message&quot;</span> /&gt;<br><span class="hljs-regexp">//</span> 等同于<br>&lt;input<br>v-bind:value=<span class="hljs-string">&quot;message&quot;</span><br>v-on:input=<span class="hljs-string">&quot;message=$event.target.value&quot;</span><br><br>&gt; <span class="hljs-regexp">//</span><span class="hljs-variable">$event</span> 指代当前触发的事件对象;<br><span class="hljs-regexp">//</span><span class="hljs-variable">$event</span>.target 指代当前触发的事件对象的 dom;<br>&gt; <span class="hljs-regexp">//</span><span class="hljs-variable">$event</span>.target.value 就是当前 dom 的 value 值;<br>&gt; <span class="hljs-regexp">//</span>在@input 方法中，value =&gt; message;<br>&gt; <span class="hljs-regexp">//</span>在:value 中,message =&gt; value;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理:&quot;&gt;&lt;/a&gt;实现原理:&lt;/h3&gt;&lt;p&gt;v-model 只不过是一个语法糖而已,真正的实现靠的还是:&lt;br&gt;1、v-bind:绑定响应式数据&lt;br&gt;2、触发 o</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>el-select 数据下拉懒加载</title>

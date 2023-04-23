@@ -224,6 +224,39 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2023/04/12/v-model%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84/" target="_self">
+          v-model是如何实现的
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/04/12/v-model%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84/" target="_self">
+        <div>
+          实现原理:v-model 只不过是一个语法糖而已,真正的实现靠的还是:1、v-bind:绑定响应式数据2、触发 oninput 事件并传递数据，并且在触发 input 事件的时候去动态把 message 设置为目标值 1234567891011&lt;input v-model=&quot;message&quot; /&gt;// 等同于&lt;inputv-bind:value=&quot;m
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-04-12 09:00" pubdate>
+              2023-04-12
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2023/03/23/el-select-%E6%95%B0%E6%8D%AE%E4%B8%8B%E6%8B%89%E6%87%92%E5%8A%A0%E8%BD%BD/" target="_self">
           el-select 数据下拉懒加载
         </a>
@@ -668,60 +701,6 @@
       <span class="category-chain">
         
   <a href="/categories/vue%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" class="category-chain-item">vue管理系统常用方法总结</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
-          vue插槽的使用
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/12/12/vue%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
-        <div>
-          1、什么是插槽1、插槽就是在子组件中提供父组件一个占位符，用于用户填充任何自己所需求的模板代码，2、插槽显不显示、怎样显示是由父组件来控制的，而插槽在哪里显示在什么位置就由子组件来进行控制3、可以把插槽认为是组件封装期间，为用户预留的内容的占位符。 2、什么时候使用插槽当子组件被复用时，需要在特定的区域展示不同的需求内容 3.使用3.1.匿名插槽（默认插槽）12345678910&lt;!--父组
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-12 17:47" pubdate>
-              2022-12-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/vue%E5%9F%BA%E7%A1%80/" class="category-chain-item">vue基础</a>
   
   
 
