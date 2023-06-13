@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-27T05:39:33.715Z</updated>
+  <updated>2023-06-13T09:06:02.345Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端性能优化</title>
+    <link href="http://example.com/2023/06/01/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://example.com/2023/06/01/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
+    <published>2023-06-01T09:02:37.000Z</published>
+    <updated>2023-06-13T09:06:02.345Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><p>1、提升首屏的加载速度，是前端性能优化中最重要的环节，这里笔者梳理出一些常规且有效的首屏优化建议。</p><p>2、目标： 通过对比优化前后的性能变化，来验证方案的有效性，了解并掌握其原理。</p><h2 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h2><p>SPA 项目，一个路由对应一个页面，如果不做处理，项目打包后，会把所有页面打包成一个文件，当用户打开首页时，会一次性加载所有的资源，造成首页加载很慢，降低用户体验。</p><p>将路由全部改成懒加载：</p><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs arcade">const routes = [<br>&#123;<br><span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;/&#x27;</span>,<br><span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Home&#x27;</span>,<br><span class="hljs-comment">// 路由级代码分解</span><br><span class="hljs-comment">// 这将为该路由生成一个单独的块(home.[hash].js)</span><br><span class="hljs-comment">// 它在访问路由时是懒加载的。</span><br>component: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> import(<span class="hljs-regexp">/_ webpackChunkName: &quot;home&quot; _/</span> <span class="hljs-string">&#x27;../views/home.vue&#x27;</span>),<br>&#125;,<br>&#123;<br><span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;/test&#x27;</span>,<br><span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;test&#x27;</span>,<br><span class="hljs-attr">component</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> import(<span class="hljs-regexp">/_ webpackChunkName: &quot;test&quot; _/</span> <span class="hljs-string">&#x27;../views/test.vue&#x27;</span>),<br>&#125;,<br>];<br></code></pre></td></tr></table></figure><p>重新打包后的 home.js 和 app.js 的文件大小会发生变化，通过路由懒加载，能将项目的首页资源大幅度压缩，减少首页白屏时间</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前端性能优化&quot;&gt;&lt;a href=&quot;#前端性能优化&quot; class=&quot;headerlink&quot; title=&quot;前端性能优化&quot;&gt;&lt;/a&gt;前端性能优化&lt;/h2&gt;&lt;p&gt;1、提升首屏的加载速度，是前端性能优化中最重要的环节，这里笔者梳理出一些常规且有效的首屏优化建议。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="vue基础" scheme="http://example.com/categories/vue%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>基于element封装el-upload文件上传</title>
