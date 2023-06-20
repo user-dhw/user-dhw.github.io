@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-13T09:28:27.637Z</updated>
+  <updated>2023-06-20T01:58:50.082Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端表格数据下载xlsx</title>
+    <link href="http://example.com/2023/06/20/%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDxlsx/"/>
+    <id>http://example.com/2023/06/20/%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDxlsx/</id>
+    <published>2023-06-20T01:49:23.000Z</published>
+    <updated>2023-06-20T01:58:50.082Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前端表格数据下载-xlsx"><a href="#前端表格数据下载-xlsx" class="headerlink" title="前端表格数据下载 xlsx"></a>前端表格数据下载 xlsx</h2><pre><code class="hljs">1、后端返回数据，前端进行下载，通过exceljs.min.js插件进行下载2、引入组件 import ExcelJS from &#39;./exceljs.min.js&#39;<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs javascript"> <span class="hljs-comment">//下载配置</span><br><span class="hljs-title function_">downConfig</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">//前端下载表格数据</span><br>  <span class="hljs-keyword">let</span> workbook = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExcelJS</span>.<span class="hljs-title class_">Workbook</span>();<br>  <span class="hljs-keyword">let</span> worksheet = workbook.<span class="hljs-title function_">addWorksheet</span>(<span class="hljs-string">&quot;Sheet1&quot;</span>);<br>  <span class="hljs-comment">//获取表格</span><br>  <span class="hljs-keyword">let</span> table = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;tableId&quot;</span>);<br>  <span class="hljs-keyword">let</span> rows = table.<span class="hljs-property">rows</span>;<br>  <span class="hljs-comment">// 遍历表格行和列，将数据添加到工作表中</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; rows.<span class="hljs-property">length</span>; i++) &#123;<br>    <span class="hljs-keyword">let</span> rowData = [];<br>    <span class="hljs-keyword">let</span> cells = rows[i].<span class="hljs-property">cells</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; cells.<span class="hljs-property">length</span>; j++) &#123;<br>      <span class="hljs-keyword">let</span> cell = worksheet.<span class="hljs-title function_">getCell</span>(<span class="hljs-string">`<span class="hljs-subst">$&#123;<span class="hljs-built_in">String</span>.fromCharCode(<span class="hljs-number">65</span> + j)&#125;</span><span class="hljs-subst">$&#123;i + <span class="hljs-number">1</span>&#125;</span>`</span>);<br>      cell.<span class="hljs-property">value</span> = cells[j].<span class="hljs-property">innerText</span>;<br>      <span class="hljs-comment">// 设置单元格边框样式</span><br>      cell.<span class="hljs-property">border</span> = &#123;<br>        <span class="hljs-attr">top</span>: &#123; <span class="hljs-attr">style</span>: <span class="hljs-string">&quot;thin&quot;</span> &#125;,<br>        <span class="hljs-attr">left</span>: &#123; <span class="hljs-attr">style</span>: <span class="hljs-string">&quot;thin&quot;</span> &#125;,<br>        <span class="hljs-attr">bottom</span>: &#123; <span class="hljs-attr">style</span>: <span class="hljs-string">&quot;thin&quot;</span> &#125;,<br>        <span class="hljs-attr">right</span>: &#123; <span class="hljs-attr">style</span>: <span class="hljs-string">&quot;thin&quot;</span> &#125;<br>      &#125;;<br>      <span class="hljs-comment">// 设置表头单元格（A1到D1）的背景颜色</span><br>      <span class="hljs-keyword">if</span> (i === <span class="hljs-number">0</span> &amp;&amp; j &gt;= <span class="hljs-number">0</span> &amp;&amp; j &lt;= <span class="hljs-number">3</span>) &#123;<br>        cell.<span class="hljs-property">fill</span> = &#123;<br>          <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;pattern&quot;</span>,<br>          <span class="hljs-attr">pattern</span>: <span class="hljs-string">&quot;solid&quot;</span>,<br>          <span class="hljs-attr">fgColor</span>: &#123; <span class="hljs-attr">argb</span>: <span class="hljs-string">&quot;c1d5f1&quot;</span> &#125;, <span class="hljs-comment">// 设置为蓝色，可以根据需要修改颜色值</span><br>        &#125;;<br>      &#125;<br>      <span class="hljs-keyword">if</span> (j === <span class="hljs-number">0</span>) &#123;<br>        cell.<span class="hljs-property">fill</span> = &#123;<br>          <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;pattern&quot;</span>,<br>          <span class="hljs-attr">pattern</span>: <span class="hljs-string">&quot;solid&quot;</span>,<br>          <span class="hljs-attr">fgColor</span>: &#123; <span class="hljs-attr">argb</span>: <span class="hljs-string">&quot;c1d5f1&quot;</span> &#125;, <span class="hljs-comment">// 设置为蓝色，可以根据需要修改颜色值</span><br>        &#125;;<br>      &#125;<br>    &#125;<br>    worksheet.<span class="hljs-title function_">addRow</span>(rowData);<br>  &#125;<br>  worksheet.<span class="hljs-property">columns</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">column</span>) &#123;<br>    <span class="hljs-keyword">let</span> maxLength = <span class="hljs-number">0</span>;<br>    column.<span class="hljs-title function_">eachCell</span>(&#123; <span class="hljs-attr">includeEmpty</span>: <span class="hljs-literal">true</span> &#125;, <span class="hljs-keyword">function</span> (<span class="hljs-params">cell</span>) &#123;<br>      <span class="hljs-keyword">let</span> length = cell.<span class="hljs-property">value</span> ? cell.<span class="hljs-property">value</span>.<span class="hljs-title function_">toString</span>().<span class="hljs-property">length</span> : <span class="hljs-number">0</span>;<br>      maxLength = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLength, length);<br>    &#125;);<br>    column.<span class="hljs-property">width</span> = maxLength &lt; <span class="hljs-number">12</span> ? <span class="hljs-number">12</span> : maxLength + <span class="hljs-number">2</span>; <span class="hljs-comment">// 设置列宽度，加上额外的空隙</span><br>  &#125;);<br><br>  <span class="hljs-comment">// 创建下载链接</span><br>  workbook.<span class="hljs-property">xlsx</span>.<span class="hljs-title function_">writeBuffer</span>().<span class="hljs-title function_">then</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">buffer</span>) &#123;<br>    <span class="hljs-keyword">let</span> blob = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Blob</span>([buffer], &#123; <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;</span> &#125;);<br>    <span class="hljs-keyword">let</span> downloadLink = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;a&quot;</span>);<br>    downloadLink.<span class="hljs-property">href</span> = <span class="hljs-variable constant_">URL</span>.<span class="hljs-title function_">createObjectURL</span>(blob);<br>    downloadLink.<span class="hljs-property">download</span> = <span class="hljs-string">&quot;配置预览.xlsx&quot;</span>;<br>    <span class="hljs-comment">// 添加下载链接到页面</span><br>    <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">appendChild</span>(downloadLink);<br>    <span class="hljs-comment">// 模拟点击下载链接</span><br>    downloadLink.<span class="hljs-title function_">click</span>();<br>    <span class="hljs-comment">// 清理下载链接</span><br>    <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">removeChild</span>(downloadLink);<br>  &#125;);<br>&#125;,<br></code></pre></td></tr></table></figure></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前端表格数据下载-xlsx&quot;&gt;&lt;a href=&quot;#前端表格数据下载-xlsx&quot; class=&quot;headerlink&quot; title=&quot;前端表格数据下载 xlsx&quot;&gt;&lt;/a&gt;前端表格数据下载 xlsx&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;1、后端返</summary>
+      
+    
+    
+    
+    <category term="js基础" scheme="http://example.com/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>前端性能优化</title>
@@ -437,28 +459,6 @@
     
     
     <category term="js基础" scheme="http://example.com/categories/js%E5%9F%BA%E7%A1%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue中router和route的区别</title>
-    <link href="http://example.com/2022/11/20/Vue%E4%B8%ADrouter%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://example.com/2022/11/20/Vue%E4%B8%ADrouter%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
-    <published>2022-11-20T03:35:37.000Z</published>
-    <updated>2023-02-13T07:30:01.211Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="router"><a href="#router" class="headerlink" title="router"></a><strong>router</strong></h2><p>router 是 VueRouter 的实例对象,也是一个全局的路由对象，里面有很多的属性和方法比如：</p><h4 id="router-push："><a href="#router-push：" class="headerlink" title="router.push："></a>router.push：</h4><p>跳转链接就可以用  <code>this.$router.push，和router-link跳转一样</code></p><h4 id="router-replace"><a href="#router-replace" class="headerlink" title="router.replace():"></a>router.replace():</h4><p>跟 router.push 作用是一样的，但是它不会向 history 添加新记录，而是跟它的方法名一样替换掉当前的 history 记录.</p><h4 id="router-go-n"><a href="#router-go-n" class="headerlink" title="router.go(n):"></a>router.go(n):</h4><p>这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，window.history.Go(n)</p><h2 id="route"><a href="#route" class="headerlink" title="route"></a><strong>route</strong></h2><p>route 是当前正在跳转的路由对象，可以从 route 里面获取 hash，name ，path，query，params， fullPath 等属性方法比如接受参数时使用<br><strong>this.$route.query.参数名 —- this.route.params.参数名</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;router&quot;&gt;&lt;a href=&quot;#router&quot; class=&quot;headerlink&quot; title=&quot;router&quot;&gt;&lt;/a&gt;&lt;strong&gt;router&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;router 是 VueRouter 的实例对象,也是一个全局的路由对象，</summary>
-      
-    
-    
-    
-    <category term="vue基础" scheme="http://example.com/categories/vue%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
