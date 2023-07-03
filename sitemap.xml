@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/07/03/100%E4%B8%AA%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise%E6%8E%A7%E5%88%B6%E5%B9%B6%E5%8F%91/</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/06/20/%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BDxlsx/</loc>
     
     <lastmod>2023-06-20</lastmod>
@@ -211,7 +220,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-06-20</lastmod>
+    <lastmod>2023-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -221,21 +230,21 @@
   
   <url>
     <loc>http://example.com/categories/js%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2023-06-20</lastmod>
+    <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/vue%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2023-06-20</lastmod>
+    <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Vue/</loc>
-    <lastmod>2023-06-20</lastmod>
+    <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
